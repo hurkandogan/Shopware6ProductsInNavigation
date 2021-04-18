@@ -5,12 +5,8 @@ use CustomNavigation\Subscriber\ProductRead;
 use Shopware\Core\Framework\Context;
 use Shopware\Core\Framework\DataAbstractionLayer\Search\Criteria;
 use Shopware\Core\Framework\DataAbstractionLayer\Search\Filter\AndFilter;
-
-
 use Shopware\Core\Framework\DataAbstractionLayer\Event\EntityLoadedEvent;
 use Shopware\Core\Framework\DataAbstractionLayer\Search\Aggregation\Bucket\FilterAggregation;
-use Shopware\Core\Framework\DataAbstractionLayer\Search\Aggregation\Metric\CountAggregation;
-
 use Shopware\Core\Framework\DataAbstractionLayer\Search\Filter\EqualsFilter;
 use Shopware\Core\Framework\Rule\Container\Container;
 use Shopware\Core\System\SalesChannel\SalesChannelContext;
@@ -50,10 +46,6 @@ class ProductsInNavigation implements EventSubscriberInterface{
                     $subCategory->getCategory()->setProducts($products);
                 }
             }
-//            echo'<pre>';
-//            var_dump($products);
-//            exit(0);
-//            echo'</pre>';
         }
     }
 }
